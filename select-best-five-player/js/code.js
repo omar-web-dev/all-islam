@@ -1,70 +1,28 @@
+      
+function myFunction() {
+    document.querySelector(".myBtn").disabled = true;
+}
+  
 
-// function plyerName(player) {
-//     const playerName = document.getElementById(player).innerText;
-//        return playerName
-// }
-
-
-// const playerArray = []
-
-// function selectedPlayer(player){
-    
-//     document.getElementById(player).addEventListener('click' , function() {
+function selectPlayerName(thisID) {
+    const orderList = document.querySelectorAll("#selectOlList li")
+    if (orderList.length == 5) {
+        alert("Maximum of 5 players can be Select")
+    }
+    else {
+        const playerNameElement = thisID.parentNode.children[0]
+        const playerName = playerNameElement.innerText
+        const createListTag = document.createElement("li");
+        createListTag.innerText = playerName
+        const getOderList = document.getElementById("selectOlList")
+        getOderList.appendChild(createListTag)
         
-//         if (player == 'player-1') {
-//             playerArray.push(plyerName('player-1-name'));
-//             console.log(playerArray);
-//             for (let i = 0; i < playerArray.length; i++) {
-//                 const element = playerArray[i];
-//                 console.log(element);
-//             }
-//         }else if (player == 'player-2') {
-//             playerArray.push(plyerName('player-2-name'));
-//             console.log(playerArray);
-//         }
-//         else if (player == 'player-3') {
-//             playerArray.push(plyerName('player-3-name'));
-//         }
-//         else if (player == 'player-4') {
-//             playerArray.push(plyerName('player-4-name'));
-//         }
-//         else if (player == 'player-5') {
-//             playerArray.push(plyerName('player-5-name'));
-//         }
-//         else if (player == 'player-6') {
-//             playerArray.push(plyerName('player-6-name'));
-//         }
-//         else if (player == 'player-7') {
-//             playerArray.push(plyerName('player-7-name'));
-//         }
-//         else if (player == 'player-8') {
-//             playerArray.push(plyerName('player-8-name'));
-//         }
-//         else if (player == 'player-9') {
-//             playerArray.push(plyerName('player-9-name'));
-//         }
-//     })
+    }
+}
+
+// function myFunction() {
+//     document.getElementById("player-1").disabled = true;
 // }
-
-
-// // console.log(selectedPlayer('player-1'));
-// selectedPlayer('player-1')
-// selectedPlayer('player-2')
-// selectedPlayer('player-3')
-// selectedPlayer('player-4')
-// selectedPlayer('player-5')
-// selectedPlayer('player-6')
-// selectedPlayer('player-7')
-// selectedPlayer('player-8')
-// selectedPlayer('player-9')
-
-// // const mybePlayer  = 5
-
-
-// document.getElementById('calculate').addEventListener('click' , function(){
-//     const perPlayerConstElement = document.getElementById('per-player-cost').value
-//     console.log(perPlayerConstElement);
-// })
 
 
 const player = 5;
@@ -109,4 +67,3 @@ document.getElementById('calculate-total-cost').addEventListener('click' , funct
         }
     }
 })
-
