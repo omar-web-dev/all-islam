@@ -1,13 +1,19 @@
 
-function selectPlayerName(thisID) {
+function selectPlayerName(thisId) {
     let selectedList = 0;
     const selectElement = document.getElementById('selected')
     const orderList = document.querySelectorAll("#selectOlList li")
     if (orderList.length == 5) {
         alert("Maximum of 5 players can be Select")
+        thisId.disabled = false;
+        thisId.style.backgroundColor = 'green';
     }
     else {
-        const playerNameElement = thisID.parentNode.children[0]
+        const playerNameElement = thisId.parentNode.children[0]
+        thisId.disabled = true;
+        // thisID.style.border = '1px solid #b8a0a0';
+        thisId.style.backgroundColor = '#c5bdbd';
+        thisId.color= '#434040';
         const playerName = playerNameElement.innerText
         const createListTag = document.createElement("li");
         createListTag.innerText = playerName
@@ -23,28 +29,17 @@ function selectPlayerName(thisID) {
     }
 }
 
-
-const selectElement = document.getElementById('selected').innerText
-// function selectInnerText(currentId) {
-//     const element = document.getElementById(currentId) 
-//     const costString = element.innerText
-//     // const cost = parseFloat(costString);
-//     return costString
-// }
-// console.log(selectInnerText('selected'));
-
-const player = 4;
-
 function selectFlied(currentId) {
     const element = document.getElementById(currentId) 
     const costString = element.value
     const cost = parseFloat(costString);
     return cost
 }
-
 document.getElementById('calculate').addEventListener('click' , function(){
     const perPlayerCost = selectFlied('per-player-cost')
-
+    const playerParent = document.getElementById('selectOlList')
+    const playerChilder = playerParent.children
+    const player = playerChilder.length
     if (isNaN(perPlayerCost)) {
         alert('Please Enter a Per Player Budget')
     }else{
@@ -53,9 +48,6 @@ document.getElementById('calculate').addEventListener('click' , function(){
         playerCostElement.innerText = totalPlayerCost
     }
 })
-
-
-
 
 document.getElementById('calculate-total-cost').addEventListener('click' , function(){
     const coachCost = selectFlied('coach-cost-flied')
