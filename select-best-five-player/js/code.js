@@ -1,10 +1,7 @@
-      
-function myFunction() {
-    document.querySelector(".myBtn").disabled = true;
-}
-  
 
 function selectPlayerName(thisID) {
+    let selectedList = 0;
+    const selectElement = document.getElementById('selected')
     const orderList = document.querySelectorAll("#selectOlList li")
     if (orderList.length == 5) {
         alert("Maximum of 5 players can be Select")
@@ -18,14 +15,25 @@ function selectPlayerName(thisID) {
         getOderList.appendChild(createListTag)
         
     }
+    selectedList += orderList.length;
+    if (selectedList <=4) {
+        selectElement.innerText = selectedList + 1;
+    } else {
+        selectElement.innerText = selectedList;
+    }
 }
 
-// function myFunction() {
-//     document.getElementById("player-1").disabled = true;
+
+const selectElement = document.getElementById('selected').innerText
+// function selectInnerText(currentId) {
+//     const element = document.getElementById(currentId) 
+//     const costString = element.innerText
+//     // const cost = parseFloat(costString);
+//     return costString
 // }
+// console.log(selectInnerText('selected'));
 
-
-const player = 5;
+const player = 4;
 
 function selectFlied(currentId) {
     const element = document.getElementById(currentId) 
@@ -67,3 +75,4 @@ document.getElementById('calculate-total-cost').addEventListener('click' , funct
         }
     }
 })
+// https://github.com/programming-hero-web-course2/best-five-dom-assignment-omar-web-dev

@@ -13,12 +13,12 @@
     <!-- ---- my style link ----- -->
     <link rel="stylesheet" href="css/style.css">
     <style>
-          button:disabled,
+        button:disabled,
         button[disabled] {
-            border: 1px solid #b8a0a0;
-            background-color: #c5bdbd;
-            color: #434040;
-        }
+        border: 1px solid #b8a0a0;
+        background-color: #c5bdbd;
+        color: #434040;
+    }
     </style>
 </head>
 
@@ -57,7 +57,7 @@
                             <div class="card-des text-white bg-black text-center border-2 border-gray-600 border-t-0">
                                 <h3 id="player-1-name" class="header text-3xl pt-5 font-semibold">Mesut Ozil</h3>
                                 <h4 class="pb-5 text-gray-400 mt-1">3G - 4GHz Asia Cup</h4>
-                                <button class="myBtn bg-blue-400 w-4/5 text-xl py-2 rounded-md mb-5"  onclick="selectPlayerName(this); myFunction()">SELECT</button>
+                                <button class=" myBtn bg-blue-400 w-4/5 text-xl py-2 rounded-md mb-5"  onclick="selectPlayerName(this); this.disabled = true">SELECT</button>
                             </div>
                         </div>
                         <div class="card">
@@ -65,7 +65,7 @@
                             <div class="card-des text-white bg-black text-center border-2 border-gray-600 border-t-0">
                                 <h3 id="player-2-name" class="header text-3xl pt-5 font-semibold">Xabi Alonso</h3>
                                 <h4 class="pb-5 text-gray-400 mt-1">3G - 4GHz Asia Cup</h4>
-                                <button class=" myBtn bg-blue-400 w-4/5 text-xl py-2 rounded-md mb-5"  onclick="selectPlayerName(this);  myFunction()">SELECT</button>
+                                <button class="myBtn bg-blue-400 w-4/5 text-xl py-2 rounded-md mb-5"  onclick="selectPlayerName(this); this.disabled = true">SELECT</button>
                             </div>
                         </div>
                         <div class="card">
@@ -73,14 +73,14 @@
                             <div class="card-des text-white bg-black text-center border-2 border-gray-600 border-t-0">
                                 <h3 id="player-3-name" class="header text-3xl pt-5 font-semibold">	Neymar</h3>
                                 <h4 class="pb-5 text-gray-400 mt-1">3G - 4GHz Asia Cup</h4>
-                                <button id="player-3" class="bg-blue-400 w-4/5 text-xl py-2 rounded-md mb-5"  onclick="selectPlayerName(this)">SELECT</button>
+                                <button id="player-3" class="myBtn bg-blue-400 w-4/5 text-xl py-2 rounded-md mb-5"  onclick="selectPlayerName(this); this.disabled = true">SELECT</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- --------------- select list -------------- -->
                 <div class="w-1/4  text-white bg-black ml-10"> 
-                    <h2 class="text-3xl font-semibold text-center mt-5">Selected - 00</h2>
+                    <h2 class="text-3xl font-semibold text-center mt-5">Selected - 0<span id="selected">0</span></h2>
                     <img class="mx-auto mt-2" src="images/ureg-ureg marker.png" alt="">
                     <ol id="selectOlList" class="list-decimal text-2xl mt-3 pl-12" type="1">
                       
@@ -97,7 +97,7 @@
                                 <div class="card-des text-white bg-black text-center border-2 border-gray-600 border-t-0">
                                     <h3 id="player-4-name" class="header text-3xl pt-5 font-semibold">Yaya Toure</h3>
                                     <h4 class="pb-5 text-gray-400 mt-1">3G - 4GHz Asia Cup</h4>
-                                    <button id="player-4" class="bg-blue-400 w-4/5 text-xl py-2 rounded-md mb-5" onclick="selectPlayerName(this)">SELECT</button>
+                                    <button id="player-4" class="myBtn bg-blue-400 w-4/5 text-xl py-2 rounded-md mb-5" onclick="selectPlayerName(this); this.disabled = true">SELECT</button>
                                 </div>
                             </div>
                             <div class="card">
@@ -105,7 +105,7 @@
                                 <div class="card-des text-white bg-black text-center border-2 border-gray-600 border-t-0">
                                     <h3 id="player-5-name" class="header text-3xl pt-5 font-semibold">Robin van</h3>
                                     <h4 class="pb-5 text-gray-400 mt-1">3G - 4GHz Asia Cup</h4>
-                                    <button id="player-5" class="bg-blue-400 w-4/5 text-xl py-2 rounded-md mb-5"  onclick="selectPlayerName(this)">SELECT</button>
+                                    <button id="player-5" class="myBtn bg-blue-400 w-4/5 text-xl py-2 rounded-md mb-5"  onclick="selectPlayerName(this); this.disabled = true">SELECT</button>
                                 </div>
                             </div>
                             <div class="card">
@@ -113,7 +113,7 @@
                                 <div class="card-des text-white bg-black text-center border-2 border-gray-600 border-t-0">
                                     <h3 id="player-6-name" class="header text-3xl pt-5 font-semibold">Andres Iniesta</h3>
                                     <h4 class="pb-5 text-gray-400 mt-1">3G - 4GHz Asia Cup</h4>
-                                    <button id="player-6" class="bg-blue-400 w-4/5 text-xl py-2 rounded-md mb-5"  onclick="selectPlayerName(this)">SELECT</button>
+                                    <button id="player-6" class="myBtn bg-blue-400 w-4/5 text-xl py-2 rounded-md mb-5"  onclick="selectPlayerName(this); this.disabled = true">SELECT</button>
                                 </div>
                             </div>
                         </div>
@@ -126,7 +126,7 @@
                                 <div class="card-des text-white bg-black text-center border-2 border-gray-600 border-t-0">
                                     <h3 id="player-7-name" class="header text-3xl pt-5 font-semibold">Lionel Messi</h3>
                                     <h4 class="pb-5 text-gray-400 mt-1">3G - 4GHz Asia Cup</h4>
-                                    <button id="player-7" class="bg-blue-400 w-4/5 text-xl py-2 rounded-md mb-5"  onclick="selectPlayerName(this)">SELECT</button>
+                                    <button id="player-7" class="myBtn bg-blue-400 w-4/5 text-xl py-2 rounded-md mb-5"  onclick="selectPlayerName(this); this.disabled = true">SELECT</button>
                                 </div>
                             </div>
                             <div class="card">
@@ -134,7 +134,7 @@
                                 <div class="card-des text-white bg-black text-center border-2 border-gray-600 border-t-0">
                                     <h3 id="player-8-name" class="header text-3xl pt-5 font-semibold">Kylian Mbappé</h3>
                                     <h4 class="pb-5 text-gray-400 mt-1">3G - 4GHz Asia Cup</h4>
-                                    <button id="player-8" class="bg-blue-400 w-4/5 text-xl py-2 rounded-md mb-5"  onclick="selectPlayerName(this)">SELECT</button>
+                                    <button id="player-8" class="myBtn bg-blue-400 w-4/5 text-xl py-2 rounded-md mb-5"  onclick="selectPlayerName(this); this.disabled = true">SELECT</button>
                                 </div>
                             </div>
                             <div class="card">
@@ -142,7 +142,7 @@
                                 <div class="card-des text-white bg-black text-center border-2 border-gray-600 border-t-0">
                                     <h3 id="player-9-name" class="header text-3xl pt-5 font-semibold">Sergio Ramos</h3>
                                     <h4 class="pb-5 text-gray-400 mt-1">3G - 4GHz Asia Cup</h4>
-                                    <button id="player-9" class="bg-blue-400 w-4/5 text-xl py-2 rounded-md mb-5"  onclick="selectPlayerName(this)">SELECT</button>
+                                    <button id="player-9" class="myBtn bg-blue-400 w-4/5 text-xl py-2 rounded-md mb-5"  onclick="selectPlayerName(this); this.disabled = true">SELECT</button>
                                 </div>
                             </div>
                         </div>
