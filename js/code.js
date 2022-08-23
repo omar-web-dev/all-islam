@@ -11,7 +11,6 @@ function selectPlayerName(thisId) {
     else {
         const playerNameElement = thisId.parentNode.children[0]
         thisId.disabled = true;
-        // thisID.style.border = '1px solid #b8a0a0';
         thisId.style.backgroundColor = '#c5bdbd';
         thisId.color= '#434040';
         const playerName = playerNameElement.innerText
@@ -68,3 +67,4 @@ document.getElementById('calculate-total-cost').addEventListener('click' , funct
     }
 })
 // https://github.com/programming-hero-web-course2/best-five-dom-assignment-omar-web-dev
+// https://630465620a34a12f7b7bd9f9--lucent-entremet-415932.netlify.app/
